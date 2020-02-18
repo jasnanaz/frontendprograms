@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>mypage</title>
+		<script>
+			var a=1;
+			var b="this is good";
+			var c=b.indexOf("is");
+			document.write(c,"<br>");    /*here c=2 because first "is" is inside this*/
+			var d=b.lastIndexOf("is");
+			document.write(d,"<br>");
+			var e=b.slice(5,7);                   /* here  i=5 s=6 , thus to get"is"  -5, */
+			document.write(e,"<br>");
+			var f=b.slice(-4,-2);                /* here g=(-4) o=(-3) , so to get "go" -4,-2 */  
+			document.write(f,"<br>");
+			var g=b.replace("go","lied");                  
+			document.write(g,"<br>");
+			var h=b.toUpperCase();                 
+			document.write(h,"<br>");
+			var i=b+" "+h;                  
+			document.write(i,"<br>");
+			var j=b.charAt(6);                  
+			document.write(j,"<br>");
+			var k=b.split(" ");                  
+			document.write(k,"<br>");
+					
+		</script>
+	</head>
+	<body>hello<br>ho
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function addValues(){
+    var invalue=document.getElementById("val").value;
+    var ul=document.getElementById("unorder");
+    var li=document.createElement("li");
+    li.setAttribute("id",invalue);
+     li.appendChild(document.createTextNode(invalue));
+     ul.appendChild(li);  
+
+}
+function deleteValues(){
+    var invalue=document.getElementById("val").value;
+    var ul=document.getElementById("unorder");
+    var li=document.getElementById(invalue); 
+    ul.removeChild(li);
+}
+    </script>
+</head>
+<body>
+    <input type="text" name="fname" id="val">
+    <input type="button" name="add" value="add" onclick="addValues()">
+    <input type="button" name="delete" value="delete" onclick="deleteValues()"> <br>
+    <ul id="unorder"></ul>
+    </body>

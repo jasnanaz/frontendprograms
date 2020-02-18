@@ -1,0 +1,32 @@
+<!doctype html>
+<head>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $("#add").click(function(){
+        var invalue= $("#txt").val();   
+        $("#txt").val(""); 
+        if(invalue!=""){
+        $("#div").append('<div style="border:2px solid blue"><p style="border:2px solid orange">'+invalue+'</p><button id="delete" onclick="deleteList(this)">x</button><button onclick="editText(this)">Edit</button></div>');
+        }
+        else {return false;}
+        });
+       });
+
+       function deleteList(e){
+        $(e).parent().remove();
+        }
+
+       function editText(f){
+           var editText=$(f).parent().find('p').text();
+           $("#txt").val(editText);
+       }
+ 
+    </script>
+    </head>
+    <body>
+        <input type="text" id="txt">
+        <input type="button" name="add" value="add" id="add">
+        <div id="div" style="border:5px solid red"></div>
+           
+           </body>

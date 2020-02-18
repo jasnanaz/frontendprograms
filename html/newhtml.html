@@ -1,0 +1,171 @@
+<!doctype html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/newstyle.css">
+    <script>
+        function validateForm(){
+            var text=document.getElementById("fname").value;
+            var lastname=document.getElementById("lname").value;
+            var sname=document.getElementById("sname").value;
+            var selmonth=document.getElementById("selmonth").value;
+            var selday=document.getElementById("selday").value;
+            var selyear=document.getElementById("selyear").value;
+            var gen=document.getElementById("rad").checked;
+            var con=document.getElementById("country").value;
+            var email=document.getElementById("email").value;
+            var phone=document.getElementById("phone").value;
+            var pass=document.getElementById("pass").value;
+            var confirm=document.getElementById("confirm").value;
+            var check=document.getElementById("check").checked;
+        if(text==""||text==null){
+              window.alert("please fill first name");
+                return false;
+        }
+        if(lastname==""||lastname==null){
+              window.alert("please fill last name");
+                return false;
+        }
+        if(sname==""||sname==null){
+              window.alert("please fill screen name");
+                return false;
+        }
+       if(selmonth==0)
+       {
+           window.alert("please select a month");
+        //    selmonth.focus();
+           return false;
+       }
+       if(selday==0)
+       {
+           window.alert("please select a day");
+        //    selday.focus();
+           return false;
+       }
+       if(selyear==0)
+       {
+           window.alert("please select a year");
+        //    selyear.focus();
+           return false;
+       }
+      if(gen==false){
+        window.alert("please select gender");
+        return false;
+      }
+      if(con==0){
+          window.alert("please select a country");
+          return false;
+      }
+      if(email==""||email==null){
+        window.alert("please enter your email");
+          return false;
+      }
+      if(phone==""||phone==null){
+        window.alert("please enter your contact number");
+          return false;
+      }
+      if(pass==""||pass==null){
+          window.alert("please enter your password");
+          return false;
+      }
+      if(confirm==""||confirm==null){
+        window.alert("please enter your confirm password");
+          return false;
+      }
+    if(check==false){
+        window.alert("please enter checkbox to proceed");
+          return false;
+    }
+       return true;
+        }
+    </script>
+    </head>
+    <body>
+        <form action="tablej.html" method="GET" target="_blank" autocomplete="off" name="form1" enctype="multipart/form-data" onsubmit="return validateForm()">
+           
+         <table class="sample">
+           <tr>
+              <th colspan="2">Sign up</th>
+           </tr>
+           <tr>
+                <td class="one">First Name <span class="sup">*</span></td>
+                 <td class="text1"><input type="text" class="" id="fname" name="fname" pattern="[a-zA-Z]{4,}" placeholder="enter a name"></td>
+            </tr>
+            <tr>
+                    <td class="one">Last Name</td>
+                     <td class="text1"><input type="text" class="" id="lname" name="fname" pattern="[a-zA-Z]{4,}" placeholder="enter a name"></td>
+                </tr>
+                <tr>
+                        <td class="one">Screen Name</td>
+                         <td class="text1"><input type="text" class="" id="sname" name="fname" pattern="[a-zA-Z]{4,}" placeholder="enter a name"></td>
+                    </tr>
+                    <tr>
+                            <td class="one">Date of Birth</td>
+                            <td><select name="months" id="selmonth" class="cl1" required>
+                                <option value="">May</option>
+                                <option value="jan">January</option>
+                                <option value="feb">feb</option>
+                                <option value="mar">Mar</option>
+                            </select>
+                            <select name="days" id="selday" class="cl2" required >
+                                    <option value="">5</option>
+                                    <option value="one">1</option>
+                                    <option value="two">2</option>
+                                    <option value="three">3</option>
+                                </select>
+                            <select name="days" id="selyear" class="cl3" required>
+                                    <option value="">1995</option>
+                                    <option value="asd">1990</option>
+                                    <option value="qwe">2000</option>
+                                    <option value="ddf">2001</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                            <td class="one">Gender</td>
+                            <td><input type="radio" class="" id="rad" name="gender" value="m" required> male
+                               <input type="radio" class="" id="" name="gender" value="f"> female
+                            </td>
+                        </tr>
+                        <tr>
+                               
+                    <tr>
+                       <td class="one">Country</td>
+                       <td><select name="country" id="country" class="cl4" required>
+                            <option value="">Select a Country</option>
+                             <option value="india">India</option>
+                             <option value="pakistan">Pakistan</option>
+                              <option value="china">China</option>
+                             </select></td>
+                             </tr>
+                             <tr>
+                                    <td class="one">Email<span class="sup">*</span></td>
+                                    <td><input type="email" class="" id="email" name="email" pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$" placeholder="enter your email" onclick="validEmail()"></td>
+                                </tr>   
+                            </tr>
+                            <td class="one">Phone number</td>
+                            <td><input type="number" class="" id="phone" name="number" placeholder="enter your phone number"  pattern="[0-9]{10}" required></td>
+                        </tr>     
+                        <tr>
+                                <td class="one">Password<span class="sup">*</span></td>
+                                <td><input type="password" class="pass" id="pass"  placeholder="enter your password" ></td>
+                            </tr>        
+                            <tr>
+                                    <td class="one">Confirm Password<span class="sup">*</span></td>
+                                    <td><input type="password" class="confirm" id="confirm"  placeholder="enter your password"></td>
+                                </tr>  
+                                <tr>
+                                        <td></td>
+                                        <td><input type="checkbox" class="" id="check" name="name" value="s">I agree to the Terms of use</td>
+    
+                                    </tr>         
+    
+                                    <tr>
+                                            <td colspan="2" class="col">
+                                           <!-- <input type="button" value="cancel" name="cancel" style="float:right"> -->
+                                            <input type="submit" value="submit" name="submit" style="float:right">
+                                            
+                                        </td>
+                                        </tr>
+                                        </table>
+                                        </form>
+                                        </body>
+                                        </html>

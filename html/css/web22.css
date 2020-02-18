@@ -1,0 +1,28 @@
+.firstdiv
+{
+    float:left;  
+    background:rgb(196, 132, 132); 
+    width:25%; 
+    height:700px;
+    margin-right:3px;
+}
+.seconddiv
+{
+    float:left;  
+    background:rgb(116, 198, 201); 
+    width:49.5%; 
+    height:700px; 
+}
+.thirddiv
+{
+    float:right; 
+    background:rgb(30, 66, 99); 
+    width:25%; 
+    height:700px; 
+}
+img
+{
+  margin-left: 50px;
+  margin-top:50px;
+  
+}

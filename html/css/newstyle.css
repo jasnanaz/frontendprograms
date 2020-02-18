@@ -1,0 +1,113 @@
+body
+{
+    background-color:black;
+}
+table
+{
+    border: 1px solid white;
+    
+}
+input[type=text],input[type=number],input[type=email],input[type=password],input[type=file], 
+input[type=time],input[type=button]{
+    width: 100%;
+    background-color:white;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(43, 221, 132);
+    border-radius:4px;
+    box-sizing:border-box;
+
+  }
+  .sample{
+      border: 1px solid white;
+      margin-left:auto; margin-right:auto;
+      background-color:black;
+      color:yellow;
+      border-radius:4px;
+  }
+  input[type=submit] {
+    width: 25%;
+    background-color:rgb(63, 109, 63);
+    color: white;
+    padding: 10px 15px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+  }
+  input[type=button] {
+    width: 25%;
+    background-color:rgb(155, 75, 115);
+    color: white;
+    padding: 10px 15px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin:5px;
+  }
+  
+th{
+    text-align: left;
+    background-color:tomato;
+    padding:15px;
+}
+.col
+{
+  border-top: 4px white;
+  background-color:orangered;
+  margin: 5px;
+
+}
+.cl4{
+    width: 100%;
+    background-color:white;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(43, 221, 132);
+    border-radius:4px;
+    box-sizing:border-box;
+}
+.cl1{
+   
+    background-color:white;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(43, 221, 132);
+    border-radius:4px;
+    box-sizing:border-box;
+}
+.cl2{
+
+  background-color:white;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(43, 221, 132);
+  border-radius:4px;
+  box-sizing:border-box;
+}
+.cl3{
+ 
+  background-color:white;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(43, 221, 132);
+  border-radius:4px;
+  box-sizing:border-box;
+}
+.sup
+{
+      color:red;
+    vertical-align: super;
+    
+}
+.one
+{
+  text-align:right;
+}

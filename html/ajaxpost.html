@@ -1,0 +1,38 @@
+<!doctype html>
+<head>
+        <style>
+                table, th, td {
+                  border: 1px solid black;
+                  border-collapse: collapse;
+                }
+                </style>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#form1").submit(function(e){
+    e.preventDefault();   
+    var staffid=$("#num").val();
+    $.post('http://192.168.1.250/ajax/post.php',{'staffID':staffid},function(staffid){
+        //document.write(staffid['data']['Name']);
+        $("#tb").append('<tr><td>'+staffid['data']['Name']+'</td><td>'+staffid['data']['Age']+'</td><td>'+staffid['data']['Position']+'</td><td>'+staffid['data']['Office']+'</td><td>'+staffid['data']['Salary']+'</td><td>'+staffid['data']['Start_date']+'</td>');
+});
+});
+});
+</script>  
+</head>  
+<body>
+    <form id="form1" method="POST" action="">
+        <input type="number" id="num">
+        <input type="submit" id="submit" value="submit" name="submit"><br>
+        <table id="tb">
+         <tr>
+             <td>NAME</td>
+             <td>AGE</td>
+             <td>POSITION</td>
+             <td>LOCATION</td>
+             <td>SALARY</td>
+             <td>START DATE</td>
+         </tr>
+        </table>
+    </form>
+</body>  

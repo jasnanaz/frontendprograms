@@ -1,0 +1,28 @@
+<!doctype html>
+<head>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $("#add").click(function(){
+        var invalue= $("#txt").val();   
+        $("#div").append(invalue+'<p id="para"><button id="delete" onclick="deleteList(this)">x</button><button id="edit">Edit</button></p><br>');
+        });
+        });
+       function deleteList(a){
+        $(document).ready(function(){
+        $("#delete").click(function(){
+            var invalue= $("#txt").val();
+            $("#delete").remove(); 
+            $("#edit").remove(); 
+            // $("#para").remove();
+        });
+        });
+        }
+    </script>
+    </head>
+    <body>
+        <input type="text" id="txt">
+        <input type="button" name="add" value="add" id="add">
+        <div id="div"></p>
+           
+           </body>

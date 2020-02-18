@@ -1,0 +1,26 @@
+<!doctype html>
+    <head>
+    <script>
+        function doMultiply(){
+            var n=parseInt(document.getElementById("fname").value);
+            var a=parseInt(document.getElementById("sname").value);
+            var r=n*a;
+            document.getElementById("rname").value=r;
+        }
+        function doDivide(){
+            var n=parseInt(document.getElementById("fname").value);
+            var a=parseInt(document.getElementById("sname").value);
+            var r=n/a;
+            document.getElementById("rname").value=r;
+        }
+        </script>
+        </head>
+        <body>
+            First Number:<input type="number" id="fname">
+            Second Number:<input type="number" id="sname"><br>
+           <p><input type="submit" value="multiply" name="Multiply" onclick="doMultiply()">
+            <input type="submit" value="divide" name="Divide" onclick="doDivide()"></p> <br>
+            Result<input type="number" id="rname">         
+            
+
+        </body>

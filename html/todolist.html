@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function addValues(){
+var intext=document.getElementById("val").value;
+var select=document.getElementById("sel");
+var option=document.createElement("option");
+option.text=intext;
+select.add(option); //add value to option tag by taking select value
+
+}
+    </script>
+</head>
+<body>
+    <input type="text" name="fname" id="val">
+    <input type="button" name="add" value="add" onclick="addValues()"> <br>
+    <select id="sel">
+            <option value=""></option>
+          </select>
+    </select>   
+    
+ 
+    </body>

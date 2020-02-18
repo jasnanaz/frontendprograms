@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<title>calculator</title>
+		<style>
+			.div1{margin:auto;width:50%; height:250px;background-color:grey; color:#EEECE2;}
+			#div2{height:20px;width:20%;margin:auto; background-color:white;color:black}
+		</style>
+		<script>
+			 	
+				function sum()
+				{
+					var a=parseInt(document.getElementById("n1").value);
+					var b=parseInt(document.getElementById("n2").value);
+					c=a+b;
+					document.getElementById("div2").innerHTML=c;
+				}
+			function diff()
+				{
+					var a=parseInt(document.getElementById("n1").value);
+					var b=parseInt(document.getElementById("n2").value);
+					c=a-b;
+					document.getElementById("div2").innerHTML=c;
+				}
+			function mul()
+				{
+					var a=parseInt(document.getElementById("n1").value);
+					var b=parseInt(document.getElementById("n2").value);
+					c=a*b;
+					document.getElementById("div2").innerHTML=c;
+				}
+			function dvs()
+				{
+					var a=parseInt(document.getElementById("n1").value);
+					var b=parseInt(document.getElementById("n2").value);
+					c=a/b;
+					document.getElementById("div2").innerHTML=c;
+				}
+						
+		</script>
+		
+	</head>
+	<body>
+		<div class="div1"><br><h1 align = center>CALCULATOR</h1>
+		<form>
+		<table align=center>
+			<tr>
+				<th><input type="number" id="n1" placeholder="Enter first Number"></th>
+				<th><input type="number" id="n2" placeholder="Enter second Number"></th>
+				<th></th>
+			</tr>
+		</table>
+		</form>
+		<p align= center><button onclick="sum()">+</button>&nbsp&nbsp&nbsp&nbsp&nbsp
+					<button onclick="diff()">-</button>&nbsp&nbsp&nbsp&nbsp&nbsp
+					<button onclick="mul()">*</button>&nbsp&nbsp&nbsp&nbsp&nbsp
+					<button onclick="dvs()">/</button>&nbsp&nbsp&nbsp&nbsp&nbsp
+					<button onclick="diff()">ANS</button></p>
+		
+			<div id="div2">
+		
+			</div>
+		</div>
+	</body>
+</html>

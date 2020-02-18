@@ -1,0 +1,33 @@
+<!doctype html>
+<head>
+        <style>
+                table, th, td {
+                  border: 1px solid black;
+                  border-collapse: collapse;
+                }
+                </style>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+         $.get('http://192.168.1.250/ajax/get.php',function(aa){
+                     
+                for(var i=0; i<=9; i++){
+                $("#tb").append('<tr><td>'+aa['data'][i]['StaffID']+'</td><td>'+aa['data'][i]['Name']+'</td><td>'+aa['data'][i]['Age']+'</td><td>'+aa['data'][i]['Position']+'</td><td>'+aa['data'][i]['Office']+'</td><td>'+aa['data'][i]['Salary']+'</td><td>'+aa['data'][i]['Start_date']+'</td>');
+                }     
+         });
+        });
+        </script>
+        <body>
+                <table id="tb">
+                    <td>Staff id</td>
+                    <td>Staff name</td>
+                    <td>Age</td>
+                    <td>Position</td>
+                    <td>Office</td>
+                    <td>Salary</td>
+                    <td>Date</td>
+                
+                </tr>
+            </table>
+
+        </body>
